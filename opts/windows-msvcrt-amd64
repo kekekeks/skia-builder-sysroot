@@ -1,0 +1,21 @@
+is_official_build=true
+skia_enable_tools=false
+target_os="win"
+target_cpu="x64_86"
+skia_use_icu=false skia_use_sfntly=false skia_use_piex=true skia_use_system_expat=false skia_use_system_freetype2=false skia_use_system_libjpeg_turbo=false skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false skia_enable_gpu=true
+cc="x86_64-w64-mingw32-clang" cxx="x86_64-w64-mingw32-clang++"
+clang_win="$WINLLVM"
+win_vc="unused"
+win_toolchain_version="10"
+win_sdk_version="10"
+extra_asmflags = [
+    "--target=x86_64-w64-mingw32",
+]
+extra_cflags=[
+    "--target=x86_64-w64-mingw32",
+    "-fno-PIC"
+]
+extra_ldflags=[
+    "--target=x86_64-w64-mingw32",
+    "-fuse-ld=lld",
+]

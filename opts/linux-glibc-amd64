@@ -1,0 +1,24 @@
+is_official_build=true
+skia_enable_tools=false
+target_os="linux"
+target_cpu="x64_86"
+skia_use_icu=false skia_use_sfntly=false skia_use_piex=true skia_use_system_expat=false skia_use_system_freetype2=false skia_use_system_libjpeg_turbo=false skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false skia_enable_gpu=true
+cc="clang" cxx="clang++"
+extra_asmflags = [
+    "--target=x86_64-pc-linux-gnu",
+    "--sysroot=$SYSROOT",
+    "--gcc-toolchain=/usr/lib/gcc/x86_64-linux-gnu/6",
+]
+extra_cflags=[
+    "--target=x86_64-pc-linux-gnu",
+    "--sysroot=$SYSROOT",
+    "-I$SYSROOT/usr/include/c++/6/",
+    "-I$SYSROOT/usr/include/x86_64-linux-gnu/c++/6/",
+    "--gcc-toolchain=/usr/lib/gcc/x86_64-linux-gnu/6",
+]
+extra_ldflags=[
+    "--target=x86_64-pc-linux-gnu",
+    "--sysroot=$SYSROOT",
+    "-fuse-ld=lld",
+    "--gcc-toolchain=/usr/lib/gcc/x86_64-linux-gnu/6",
+]

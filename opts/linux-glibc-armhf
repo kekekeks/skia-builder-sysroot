@@ -1,0 +1,25 @@
+is_official_build=true
+skia_enable_tools=false
+target_os="linux"
+target_cpu="arm"
+skia_use_icu=false skia_use_sfntly=false skia_use_piex=true skia_use_system_expat=false skia_use_system_freetype2=false skia_use_system_libjpeg_turbo=false skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false skia_enable_gpu=true
+cc="clang" cxx="clang++"
+extra_asmflags = [
+    "--target=armv7a-linux-gnueabihf",
+    "--sysroot=$SYSROOT",
+    "-march=armv7-a",
+    "-mfpu=neon",
+    "-mthumb",
+]
+extra_cflags=[
+    "--target=armv7a-linux-gnueabihf",
+    "--sysroot=$SYSROOT",
+]
+extra_ldflags=[
+    "--sysroot=$SYSROOT",
+    "-fuse-ld=lld",
+    "--target=armv7a-linux-gnueabihf",
+]
+target_cpu="arm"
+
+
